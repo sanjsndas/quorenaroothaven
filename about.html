@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Quorena Root Haven | Our Story & Earth Philosophy</title>
+  <!-- Google Fonts & simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf3e0;   /* warm sand base */
+      font-family: 'Inter', sans-serif;
+      color: #2c221b;
+      scroll-behavior: smooth;
+    }
+
+    /* BROWN THEME palette: deep earth, terracotta, cocoa, sand */
+    :root {
+      --bark: #3b2a23;
+      --rich-brown: #5c3e2b;
+      --clay: #9b6a42;
+      --tawny: #c28a56;
+      --sand: #e6d5b8;
+      --cream: #fff2e2;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* header - consistent with homepage */
+    .header {
+      background: #2c1e16;
+      padding: 2rem 0 1rem;
+      border-bottom: 6px solid var(--tawny);
+    }
+    .logo-area h1 {
+      font-size: 2.8rem;
+      color: #fae6c3;
+      letter-spacing: -0.5px;
+    }
+    .logo-area p {
+      color: #dbbf91;
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-top: 0.4rem;
+    }
+
+    /* hero about section */
+    .about-hero {
+      background: linear-gradient(107deg, #e1cfb4 0%, #cfba99 100%);
+      padding: 3rem 0;
+      border-radius: 0 0 40px 40px;
+      margin-bottom: 2rem;
+    }
+    .about-hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .about-hero-text {
+      flex: 1.2;
+    }
+    .about-hero-text h2 {
+      font-size: 2.8rem;
+      color: #2c1e14;
+      line-height: 1.2;
+    }
+    .about-hero-img {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+    }
+    .about-hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .about-hero-img:hover img {
+      transform: scale(1.02);
+    }
+
+    /* section styling */
+    .section {
+      margin: 4rem 0;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      border-left: 8px solid var(--clay);
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      color: #3b2a23;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #fffaf2;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px var(--shadow);
+      transition: all 0.2s ease;
+      border: 1px solid #eadbc8;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 32px -12px rgba(0,0,0,0.15);
+    }
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .card-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #5c3e2b;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #3f2f26;
+    }
+
+    /* about story block (rich content) */
+    .story-block {
+      background: #fef7ed;
+      padding: 2.5rem;
+      border-radius: 36px;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.02), 0 8px 20px rgba(0,0,0,0.05);
+      margin-bottom: 2.5rem;
+    }
+    .story-block p {
+      margin-bottom: 1.4rem;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .story-block h3 {
+      font-size: 1.9rem;
+      margin: 2rem 0 1rem;
+      color: #4f3322;
+    }
+    .story-block h4 {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 0.8rem;
+      color: #6f4a2e;
+    }
+    .values-list {
+      list-style: none;
+      margin: 1rem 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .values-list li {
+      background: #e8dccc;
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 500;
+      color: #3e2a1f;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .team-member {
+      background: #fffaf2;
+      border-radius: 32px;
+      padding: 1.5rem;
+      text-align: center;
+      border: 1px solid #e3d2bc;
+    }
+    .team-member img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid #c28a56;
+    }
+
+    footer {
+      background: #271e18;
+      color: #e2cfb3;
+      margin-top: 5rem;
+      padding: 2.5rem 0;
+      border-top: 4px solid #b97f51;
+    }
+    .footer-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .footer-info p {
+      margin: 0.4rem 0;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 1.8rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 780px) {
+      .container {
+        padding: 0 20px;
+      }
+      .about-hero-text h2 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="container">
+    <div class="logo-area">
+      <h1>🌱 Quorena Root Haven</h1>
+      <p>Where soil whispers & roots find sanctuary — organic gardening wisdom since 1987</p>
+    </div>
+  </div>
+</div>
+
+<section class="about-hero">
+  <div class="container about-hero-grid">
+    <div class="about-hero-text">
+      <h2>Rooted in heritage,<br>growing tomorrow’s earth legacy.</h2>
+      <p style="font-size:1.2rem; margin-top: 1rem;">For nearly four decades, Quorena Root Haven has been more than a garden — it’s a living testament to regenerative agriculture, community cultivation, and the sacred bond between human hands and the brown earth.</p>
+    </div>
+    <div class="about-hero-img">
+      <img src="https://picsum.photos/id/144/900/600" alt="founders in the garden with rich soil" loading="eager">
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <!-- About main story: unique & extensive -->
+  <div class="story-block">
+    <h2>Our Genesis: A Seed Planted in 1987</h2>
+    <p>Quorena Root Haven was born from a vision: to create a sanctuary where organic gardening, ecological wisdom, and human connection intertwine. Founders Margaret and Elias Quorena, both botanists disillusioned by industrial agriculture, purchased a worn-out farmland in Quorena Valley. The soil was depleted, the land eroded, but they saw potential. With nothing but hand tools, heirloom seeds, and a deep reverence for nature, they began the slow work of restoration. They planted windbreaks, built compost piles from fallen leaves, and nurtured the microbial life beneath their feet. By 1992, the land transformed into a lush demonstration site for organic methods, attracting neighbors and fellow gardeners. What started as a family homestead evolved into a nonprofit educational hub, welcoming thousands each year to learn the art of earth-centered horticulture.</p>
+    
+    <h3>🌿 The Root Haven Philosophy — Beyond Organic</h3>
+    <p>“Beyond organic” means we don’t just avoid chemicals — we actively regenerate. We view the garden as a holistic organism: soil fungi, pollinators, wild edges, and human stewards form one network. Our practices synthesize permaculture ethics (Earth Care, People Care, Fair Share) with traditional farming techniques passed down through generations. Every decision, from the brown cedar trellises to the rain-fed swales, reflects a commitment to biodiversity and climate resilience. We’ve also pioneered the “Root Haven Method”: a no-till system that combines deep mulch, green manure, and perennial polycultures. The result is not only abundant harvests but also carbon-sequestering soils and a haven for native wildlife.</p>
+    
+    <h4>Our Core Pillars</h4>
+    <ul class="values-list">
+      <li>🌎 Soil Regeneration First</li>
+      <li>🌻 Heirloom Seed Preservation</li>
+      <li>💧 Water Sovereignty & Harvesting</li>
+      <li>🦋 Pollinator & Wildlife Corridors</li>
+      <li>📚 Free Knowledge Sharing</li>
+      <li>🌾 Community Gardens Initiative</li>
+    </ul>
+    
+    <h3>From a Homestead to a Global Inspiration</h3>
+    <p>Today, Quorena Root Haven spans 47 acres of diverse ecosystems: food forests, medicinal herb spiral gardens, intensive vegetable terraces, a native prairie restoration zone, and an educational campus with demonstration greenhouses. Annually, we host over 5,000 visitors through workshops, farm stays, and our renowned “Earth Apprentice” program. Our digital library (including the extensive compendium featured on our homepage) reaches gardeners in 90+ countries. We’ve also partnered with schools to install learning gardens and with urban farms to share techniques for small-space abundance. Despite our growth, the spirit remains intimate: you can still find Margaret pruning the heritage apple trees at dawn, and Elias teaching compost microbiology with contagious enthusiasm.</p>
+    
+    <h3>Meet the Keepers — The People Behind the Soil</h3>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://picsum.photos/id/64/200/200" alt="Margaret Quorena">
+        <h4>Margaret Quorena</h4>
+        <p>Co-founder & Soil Alchemist. Author of "The Living Earth Manifesto". 40+ years of regenerative agriculture experience.</p>
+      </div>
+      <div class="team-member">
+        <img src="https://picsum.photos/id/91/200/200" alt="Elias Quorena">
+        <h4>Elias Quorena</h4>
+        <p>Co-founder & Arboretum Curator. Expert in forest gardening, grafting, and native tree restoration.</p>
+      </div>
+      <div class="team-member">
+        <img src="https://picsum.photos/id/20/200/200" alt="Dr. Sarai Okonkwo">
+        <h4>Dr. Sarai Okonkwo</h4>
+        <p>Director of Agroecology. Leads research on mycorrhizal networks and carbon farming initiatives.</p>
+      </div>
+      <div class="team-member">
+        <img src="https://picsum.photos/id/30/200/200" alt="Leo Hartmann">
+        <h4>Leo Hartmann</h4>
+        <p>Youth Education Coordinator. Inspires next-gen gardeners through hands-on nature programs.</p>
+      </div>
+    </div>
+    
+    <h3>Our Land & Its Living Legacy</h3>
+    <p>The Quorena Valley itself holds deep history — originally stewarded by Indigenous peoples who cultivated native plants and managed the woodlands for millennia. We honor this legacy by incorporating traditional ecological knowledge (TEK) into our practices: companion planting based on Three Sisters (corn, beans, squash), controlled burns for prairie health, and wildcrafting ethics. In 2015, we established the “Brown Earth Reparations Fund”, supporting Indigenous-led land restoration projects. The land now boasts over 200 species of native plants, a restored wetland that filters runoff, and soil organic matter increased from 1.2% to 8.7% since 1987 — a testament to what regenerative care can achieve.</p>
+    
+    <h3>What Makes Us Unique: The Root Haven Experience</h3>
+    <p>Unlike conventional gardens or even standard organic farms, Quorena Root Haven invites visitors to not just see but participate. From barefoot soil-sensing walks to mushroom inoculation workshops, we emphasize sensory connection. The “Root Immersion” residency allows guests to live on-site for a week, engaging in daily garden tasks, harvesting meals from the earth, and learning craftsmanship like building with cob or crafting willow trellises. Our seed library, one of the largest in the region, holds over 800 varieties of rare and heritage seeds, available freely to low-income growers. We also run a therapeutic horticulture program for veterans and individuals recovering from trauma — the brown earth, we believe, heals as much as it feeds.</p>
+    
+    <h3>Community Impact & Outreach</h3>
+    <p>Beyond our fences, Root Haven has helped establish 17 community gardens across the county, donating tools, soil, and starter plants. Our “Gardens for All” initiative distributes thousands of vegetable seedlings to food deserts each spring. We also maintain a sliding-scale CSA (Community Supported Agriculture) that makes fresh organic produce accessible to families of all incomes. In partnership with regional universities, we host the annual "Brown Earth Symposium" — a gathering of soil scientists, activists, and farmers reimagining food systems. Through it all, we remain guided by a simple belief: when you heal the earth, you heal community.</p>
+    
+    <h3>Looking Forward: The Next Chapter</h3>
+    <p>As climate challenges intensify, Quorena Root Haven is expanding our work: we’re currently developing a 10-acre agroforestry research hub, trialing drought-resilient perennial grains and new silvopasture models. We’ve also launched the “Root Haven Media” platform to produce free documentaries and skill-share videos, ensuring that regenerative knowledge transcends borders. In the next five years, we aim to train 1,000 new regenerative farmers through our apprenticeship program, creating a ripple effect of ecological restoration. Our vision is unwavering: a world where every community has access to fertile soil, clean water, and the timeless art of gardening.</p>
+    
+    <p style="margin-top: 2rem; font-weight: 500;">Whether you are a novice planting your first basil seedling or a seasoned grower, you are family here. Quorena Root Haven exists as a living library — come wander our pathways, sink your hands into the earth, and become part of this ever-unfolding story.</p>
+    <p>— The Root Haven Stewardship Council</p>
+  </div>
+  
+  <!-- Our values & commitment section (additional gallery/info) -->
+  <div class="section">
+    <h2 class="section-title">📜 Milestones & Earth Accolades</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img class="card-img" src="https://picsum.photos/id/169/400/260" alt="heritage seed bank">
+        <div class="card-content">
+          <h3>Seed Sanctuary Status</h3>
+          <p>Recognized as a global Seed Bank partner since 2005. Over 800 heirloom varieties conserved, shared and regrown.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://picsum.photos/id/46/400/260" alt="workshop participants">
+        <div class="card-content">
+          <h3>40,000+ Alumni Gardeners</h3>
+          <p>Workshops, online courses and hands-on trainings have touched over 40k individuals across six continents.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://picsum.photos/id/127/400/260" alt="regenerative agriculture award">
+        <div class="card-content">
+          <h3>2024 Brown Earth Champions</h3>
+          <p>Awarded by the International Regenerative Alliance for excellence in soil restoration and community education.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://picsum.photos/id/119/400/260" alt="forest garden">
+        <div class="card-content">
+          <h3>Food Forest Pioneer</h3>
+          <p>One of the oldest documented temperate food forests in the region — 12 acres of layered perennial abundance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Visiting & connection info: immersive details -->
+  <div class="story-block" style="background: #efe2cf;">
+    <h3>🌱 Visit the Haven — Walk the Living Classroom</h3>
+    <p>Our gates are open to all who wish to reconnect with the earth. Self-guided tours available daily, with guided walks every Saturday at 10 AM. Explore the compost cathedral, the pollinator meadow labyrinth, the ancient orchard, and the fragrant herb gardens. We also host seasonal festivals: the Spring Soil Awakening, Summer Solstice Harvest Fete, and the Autumn Root Festival featuring heirloom tastings, cider pressing, and seed swaps. For those unable to travel, our virtual reality “Root Immersion” experience streams monthly — subscribe to our newsletter for updates. Accessibility is paramount: the main paths are wheelchair-friendly, and we offer sign-language interpretation upon request. Every visitor leaves with a packet of heritage seeds to start their own journey.</p>
+    <p><strong>Admission:</strong> Free, though donations support our community programs. Group workshops require pre-registration. Overnight stays in our eco-cabins are available April–October. For details, email visit@quorenaroothaven.com or call +1 (555) 274-9832.</p>
+    <p><em>“To walk these grounds is to understand that gardening is not a hobby — it’s a way of belonging to the world.” — Margaret Quorena</em></p>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div class="footer-info">
+      <p><i>📍</i> <strong>Quorena Root Haven – Main Sanctuary</strong></p>
+      <p>1427 Evergreen Meadow Lane, Quorena Valley, QN 78201</p>
+      <p><i>📞</i> +1 (555) 274-9832  |  <i>🌾</i> hello@quorenaroothaven.com</p>
+      <p><i>🕊️</i> Mon–Sat: 9am – 6pm | Sunday: Garden meditation & workshops</p>
+    </div>
+    <div style="font-style:italic;">“Rooted in wisdom, grown with love.”</div>
+  </div>
+  <div class="copyright container">
+    © 2026 Quorena Root Haven — All content unique, crafted with brown earth devotion. Gardening for generations.
+  </div>
+</footer>
+</body>
+</html>
